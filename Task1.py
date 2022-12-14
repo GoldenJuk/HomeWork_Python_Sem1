@@ -8,14 +8,13 @@
 #- 7 -> да
 #- 1 -> нет
 
-day = input('Введите цифру, обозначающую день недели: ')
-if str(day).isdigit():
-	day = int(day)
-	if 6 <= day <= 7:
+def Make_Check(day):
+	if day == 6 or day == 7:
 		print('Да. Этот день недели - выходной')
 	elif 1 <= day <= 5:
 		print('Нет. Этот день недели - не выходной')
 	else:
 		print('Цифра должна быть от 1 до 7')
-else:
-	print('Вы ввели не цифру')
+
+n = int(input('Введите цифру, обозначающую день недели: '))
+Make_Check(n)
